@@ -19,6 +19,8 @@ module.exports = {
     output: {
       path: __dirname + '/dist',
       publicPath: '/',
-      filename: 'bundle.js'
+      filename: 'bundle.js',
+      libraryExport: "default" ,
+      libraryTarget: 'umd',
     },
   }
