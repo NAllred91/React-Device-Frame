@@ -2,7 +2,7 @@ Add device frames around a React app.
 
 # Setup
 1) `npm install https://github.com/NAllred91/React-Device-Frame.git --save`
-2) Update `src/index.js` to use `react-device-frame`. Calling this function replaces `ReactDOM.render(<App />, deviceFrame('root'))`
+2) Update `src/index.js` to use `react-device-frame`. Calling this function replaces `ReactDOM.render(<App />, 'root')`
 
 
 `src/index.js` should look like this:
