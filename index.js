@@ -12,6 +12,6 @@ export default (ReactDOM, React, App, id) => {
             }
         })
         observer.observe(document.getElementById(id), { attributes: true, childList: true, subtree: true })
-        ReactDOM.render(<App />, document.getElementById(id));
+        ReactDOM.render(App, document.getElementById(id));
     }
 }
