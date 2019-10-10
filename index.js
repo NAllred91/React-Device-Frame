@@ -1,6 +1,6 @@
 import DeviceFrame from './DeviceFrame'
 
-export default (ReactDOM, React, App, id) => {
+module.exports = (ReactDOM, React, App, id) => {
     if(window.parent === window) {
         var DeviceFrameComponent = DeviceFrame(React)
         ReactDOM.render(<DeviceFrameComponent />, document.getElementById(id))
