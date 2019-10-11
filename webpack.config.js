@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
     entry: './index.js',
     module: {
@@ -17,14 +15,9 @@ module.exports = {
     },
     resolve: {
       extensions: ['.js'],
-      alias: {          
-        'react': path.resolve(__dirname, './node_modules/react'),
-        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),      
-      }  
     },
     output: {
       path: __dirname + '/dist',
-      publicPath: '/dist/',
       filename: 'bundle.js',
       libraryExport: "default" ,
       libraryTarget: 'umd',
