@@ -1,3 +1,4 @@
+import React from 'react'
 import './DeviceFrame.css'
 
 const Nexus5 = 'nexus-5'
