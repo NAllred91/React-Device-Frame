@@ -27,7 +27,7 @@ module.exports = {
       publicPath: '/dist/',
       filename: 'bundle.js',
       libraryExport: "default" ,
-      libraryTarget: 'umd',
+      libraryTarget: 'commonjs',
       umdNamedDefine: true 
     }, 
     externals: {      
