@@ -1,9 +1,10 @@
+import ReactDOM from 'react-dom'
+import React from 'react'
 import DeviceFrame from './DeviceFrame'
 
-export default (ReactDOM, React, App, id) => {
+export default (App, id) => {
     if(window.parent === window) {
-        var DeviceFrameComponent = DeviceFrame(React)
-        ReactDOM.render(<DeviceFrameComponent />, document.getElementById(id))
+        ReactDOM.render(<DeviceFrame />, document.getElementById(id))
     }
     else {
         var observer = new MutationObserver(() => {

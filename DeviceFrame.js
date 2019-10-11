@@ -5,8 +5,7 @@ const Nexus6p = 'nexus-6p'
 const iPhone4 = 'iphone-4'
 const SamsunS8 = 'samsung-s8'
 
-export default (React) => 
-class DeviceFrame extends React.Component {
+export default class DeviceFrame extends React.Component {
     state = {
         device: Nexus5
     }
