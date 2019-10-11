@@ -24,10 +24,11 @@ module.exports = {
     },
     output: {
       path: __dirname + '/dist',
-      publicPath: '/',
+      publicPath: '/dist/',
       filename: 'bundle.js',
       libraryExport: "default" ,
       libraryTarget: 'umd',
+      umdNamedDefine: true 
     }, 
     externals: {      
         // Don't bundle react or react-dom      
