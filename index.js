@@ -1,9 +1,14 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import DeviceFrame from './DeviceFrame'
+import MobileDetect from 'mobile-detect'
 
 export default (App, id) => {
-    if(window.parent === window) {
+    const detection = new MobileDetect(window.navigator.userAgent);
+    if (detection.mobile()) {
+        ReactDOM.render(App, document.getElementById(id))
+    }
+    else if(window.parent === window) {
         ReactDOM.render(<DeviceFrame />, document.getElementById(id))
     }
     else {
@@ -13,6 +18,6 @@ export default (App, id) => {
             }
         })
         observer.observe(document.getElementById(id), { attributes: true, childList: true, subtree: true })
-        ReactDOM.render(App, document.getElementById(id));
+        ReactDOM.render(App, document.getElementById(id))
     }
 }
