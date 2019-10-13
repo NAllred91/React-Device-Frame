@@ -21,6 +21,7 @@ module.exports = {
       filename: 'bundle.js',
       libraryExport: "default" ,
       libraryTarget: 'umd',
+      library: 'reactDeviceFrame',
       umdNamedDefine: true 
     }, 
     externals: {      
