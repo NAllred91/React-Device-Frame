@@ -39,6 +39,6 @@ For example, `/test/^^` will match all paths that start with `/test`.
 
 ```
 {
-    enabledURLs: ['/test', '/path/^/test', '/my/path/^^']
+    disabledURLs: ['/test', '/path/^/test', '/my/path/^^']
 }
 ```
