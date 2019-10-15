@@ -15,3 +15,27 @@ import reactDeviceFrame from 'react-device-frame';
 
 reactDeviceFrame(<App />, 'root')
 ```
+
+
+# Optional Configurations
+You can provide an options object as the third parameter to `reactDeviceFrame` for setting optional configurations.
+
+## Allow disabling device frame
+Setting `allowDisable: true` will allow you to disable the device frame by including `disableDeviceFrame=true` in the query string.
+
+## Enable/Disable device frame for URLs
+`enabledURLs` or `disabledURLs` can be set to an array of URLs for which the device frame should be enabled/disabled.
+
+`enabledURLs` and `disabledURLs` cannot both be provided.
+
+`^` can be used as a wildcard within the path.
+For example, `/test/^/path` will match `/test/some/path`.
+
+`^^` can be used as a wildcard for the reaminder of the path.
+For example, `/test/^^` will match all paths that start with `/test`.
+
+```
+{
+    enabledURLs: ['/test', '/path/^/test', '/my/path/^^']
+}
+```

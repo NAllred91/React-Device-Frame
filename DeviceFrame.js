@@ -1,4 +1,5 @@
 import React from 'react'
+import isFullScreen from './isFullScreen'
 import './DeviceFrame.css'
 
 const Nexus5 = 'nexus-5'
@@ -11,16 +12,28 @@ export default class DeviceFrame extends React.Component {
         device: Nexus5
     }
 
+    constructor(props) {
+        super(props)
+
+        this.iframe = (
+            <iframe
+                src={window.location.href}
+                className='df-Screen'
+            ></iframe>
+        )
+
+        window.forceUpdate = () => {
+            this.forceUpdate()
+        }
+    }
+
     render() {
         return (
-            <div>
+            <div className={`${isFullScreen(this.props.options) ? 'fullScreen' : ''}`}>
                 <div className='df-DeviceFrameApp'>
                     <div className={`df-DeviceFrame df-DeviceFrame--${this.state.device}`}>
                         <div className='df-Screen-wrapper'>
-                        <iframe 
-                            src={window.location.href}
-                            className='df-Screen'
-                        ></iframe>
+                            {this.iframe}
                         </div>
                     </div>
                 </div>
