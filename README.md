@@ -29,7 +29,7 @@ Setting `allowDisable: true` will allow you to disable the device frame by inclu
 ## Enable/Disable device frame for URLs
 `enabledURLs` or `disabledURLs` can be set to an array of URLs for which the device frame should be enabled/disabled.
 
-`enabledURLs` and `disabledURLs` cannot both be provided.
+`enabledURLs` and `disabledURLs` cannot both be set.
 
 `^` can be used as a wildcard within the path.
 For example, `/test/^/path` will match `/test/some/path`.
