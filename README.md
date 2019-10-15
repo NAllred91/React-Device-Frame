@@ -34,7 +34,7 @@ Setting `allowDisable: true` will allow you to disable the device frame by inclu
 `^` can be used as a wildcard within the path.
 For example, `/test/^/path` will match `/test/some/path`.
 
-`^^` can be used as a wildcard for the reaminder of the path.
+`^^` can be used as a wildcard for the remainder of the path.
 For example, `/test/^^` will match all paths that start with `/test`.
 
 ```
