@@ -19,6 +19,9 @@ reactDeviceFrame(<App />, 'root')
 
 # Optional Configurations
 You can provide an options object as the third parameter to `reactDeviceFrame` for setting optional configurations.
+```
+reactDeviceFrame(<App />, 'root', {})
+```
 
 ## Allow disabling device frame
 Setting `allowDisable: true` will allow you to disable the device frame by including `disableDeviceFrame=true` in the query string.
